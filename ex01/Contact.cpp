@@ -24,7 +24,7 @@ void Contact::setContact()
 {
     _firstName = getInput("Enter First Name: ");
     _lastName = getInput("Enter Last Name: ");
-    _nickname = getInput("Enter Nickname: ");
+    _userName = getInput("Enter Nickname: ");
     _phoneNumber = getInput("Enter Phone Number: ");
     _darkestSecret = getInput("Enter Darkest Secret: ");
 }
@@ -41,14 +41,14 @@ void Contact::displaySummary(int index) const
     std::cout << "|" << std::setw(10) << index;
     std::cout << "|" << std::setw(10) << truncate(_firstName);
     std::cout << "|" << std::setw(10) << truncate(_lastName);
-    std::cout << "|" << std::setw(10) << truncate(_nickname) << "|" << std::endl;
+    std::cout << "|" << std::setw(10) << truncate(_userName) << "|" << std::endl;
 }
 
 void Contact::displayDetails() const
 {
     std::cout << "First Name: " << _firstName << std::endl;
     std::cout << "Last Name: " << _lastName << std::endl;
-    std::cout << "Nickname: " << _nickname << std::endl;
+    std::cout << "Nickname: " << _userName << std::endl;
     std::cout << "Phone Number: " << _phoneNumber << std::endl;
     std::cout << "Darkest Secret: " << _darkestSecret << std::endl;
 }

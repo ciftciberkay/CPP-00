@@ -16,9 +16,9 @@ class Contact
         Contact();
         ~Contact();
 
-        void    setContact();
-        void    displaySummary(int index) const;
-        void    displayDetails() const;
+        void    setPerson();
+        void    showInfo(int index) const;
+        void    showDetails() const;
 };
 
 #endif

@@ -7,7 +7,7 @@ PhoneBook::~PhoneBook() {}
 
 void PhoneBook::addContact()
 {
-    _contacts[_index].setContact();
+    _contacts[_index].setPerson();
     _index = (_index + 1) % 8;
     if (_count < 8)
         _count++;
@@ -24,7 +24,7 @@ void PhoneBook::searchContact()
     std::cout << "|----------|----------|----------|----------|" << std::endl;
     for (int i = 0; i < _count; i++)
     {
-        _contacts[i].displaySummary(i);
+        _contacts[i].showInfo(i);
     }
     std::cout << "Enter index to view details: ";
     int index;
@@ -37,7 +37,7 @@ void PhoneBook::searchContact()
     std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
     if (index >= 0 && index < _count)
     {
-        _contacts[index].displayDetails();
+        _contacts[index].showDetails();
     }
     else
     {

@@ -20,7 +20,7 @@ static std::string getInput(std::string prompt)
     return input;
 }
 
-void Contact::setContact()
+void Contact::setPerson()
 {
     _firstName = getInput("Enter First Name: ");
     _lastName = getInput("Enter Last Name: ");
@@ -29,22 +29,22 @@ void Contact::setContact()
     _darkestSecret = getInput("Enter Darkest Secret: ");
 }
 
-static std::string truncate(std::string str)
+static std::string lengthControl(std::string str)
 {
     if (str.length() > 10)
         return str.substr(0, 9) + ".";
     return str;
 }
 
-void Contact::displaySummary(int index) const
+void Contact::showInfo(int index) const
 {
     std::cout << "|" << std::setw(10) << index;
-    std::cout << "|" << std::setw(10) << truncate(_firstName);
-    std::cout << "|" << std::setw(10) << truncate(_lastName);
-    std::cout << "|" << std::setw(10) << truncate(_userName) << "|" << std::endl;
+    std::cout << "|" << std::setw(10) << lengthControl(_firstName);
+    std::cout << "|" << std::setw(10) << lengthControl(_lastName);
+    std::cout << "|" << std::setw(10) << lengthControl(_userName) << "|" << std::endl;
 }
 
-void Contact::displayDetails() const
+void Contact::showDetails() const
 {
     std::cout << "First Name: " << _firstName << std::endl;
     std::cout << "Last Name: " << _lastName << std::endl;

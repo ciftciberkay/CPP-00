@@ -5,17 +5,16 @@
 
 class PhoneBook
 {
-private:
-    Contact _contacts[8];
-    int     _index;
-    int     _count;
+    private:
+        Contact _contacts[8];
+        int     _index;
+        int     _count;
+    public:
+        PhoneBook();
+        ~PhoneBook();
 
-public:
-    PhoneBook();
-    ~PhoneBook();
-
-    void    addContact();
-    void    searchContact();
+        void    addContact();
+        void    searchContact();
 };
 
 #endif

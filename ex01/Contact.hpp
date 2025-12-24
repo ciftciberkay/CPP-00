@@ -6,20 +6,19 @@
 
 class Contact
 {
-private:
-    std::string _firstName;
-    std::string _lastName;
-    std::string _nickname;
-    std::string _phoneNumber;
-    std::string _darkestSecret;
+    private:
+        std::string _firstName;
+        std::string _lastName;
+        std::string _nickname;
+        std::string _phoneNumber;
+        std::string _darkestSecret;
+    public:
+        Contact();
+        ~Contact();
 
-public:
-    Contact();
-    ~Contact();
-
-    void    setContact();
-    void    displaySummary(int index) const;
-    void    displayDetails() const;
+        void    setContact();
+        void    displaySummary(int index) const;
+        void    displayDetails() const;
 };
 
 #endif

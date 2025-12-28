@@ -3,26 +3,20 @@
 
 int main()
 {
-    PhoneBook book;
-    std::string command;
+    PhoneBook directory;
+    std::string cmmd;
 
     while (true)
     {
         std::cout << "Enter command (ADD, SEARCH, EXIT): ";
-        if (!std::getline(std::cin, command))
+        if (!std::getline(std::cin, cmmd))
             break;
-        if (command == "ADD")
-        {
-            book.addContact();
-        }
-        else if (command == "SEARCH")
-        {
-            book.searchContact();
-        }
-        else if (command == "EXIT")
-        {
+        if (cmmd == "ADD")
+            directory.addContact();
+        else if (cmmd == "SEARCH")
+            directory.searchContact();
+        else if (cmmd == "EXIT")
             break;
-        }
     }
     return 0;
 }

@@ -22,9 +22,11 @@ void PhoneBook::searchContact()
     }
     std::cout << "|     Index|First Name| Last Name|  Nickname|" << std::endl;
     std::cout << "|----------|----------|----------|----------|" << std::endl;
-    for (int i = 0; i < _count; i++)
+    int i = 0;
+    while (i < _count)
     {
         _contacts[i].showInfo(i);
+        ++i;
     }
     std::cout << "Enter index to view details: ";
     int index;
@@ -37,11 +39,7 @@ void PhoneBook::searchContact()
     }
     std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
     if (index >= 0 && index < _count)
-    {
         _contacts[index].showDetails();
-    }
     else
-    {
         std::cout << "Index out of range." << std::endl;
-    }
 }
